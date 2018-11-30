@@ -29,6 +29,19 @@
 							</tr>
 						</table>
 					</div>
+					<table width="500" align="center" >
+						<tr>
+							<td align="left"><h3>Patients Invoices</h3></td>
+						</tr>
+						<tr>
+							<td align="left"><h4>Name</h4></td>
+						</tr>
+						<c:forEach items="${invoices}" var="patientName">
+							<tr>
+								<td >${patientName}</td>
+							</tr>
+						</c:forEach>
+					</table>
 				</td>
 			</tr>
 		</table>
