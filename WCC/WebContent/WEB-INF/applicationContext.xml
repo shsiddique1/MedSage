@@ -27,9 +27,12 @@
 		<property name="location" value="classpath:wcc-config.properties" />
 	</bean>
 	<!-- Spring Beans Helper -->
-	<bean id="springHelper" class="com.medSage.wcc.util.SpringHelper">
+	<bean id="springHelper" class="com.medsage.wcc.util.SpringHelper">
 		<property name="isRootContext">
 			<value>true</value>
 		</property>
+	</bean>
+		<bean id="medSageService" class="com.medsage.wcc.api.impl.MedSageService" scope="singleton">
+		<property name="filesPath" value="${files.path}" />
 	</bean>
 </beans>

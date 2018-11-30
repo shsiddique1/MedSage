@@ -13,17 +13,27 @@ import com.medsage.wcc.dto.Patient;
 import com.medsage.wcc.exception.CWAException;
 
 public class MedSageService implements OrderInfo{
+	Logger log = Logger.getLogger(MedSageService.class);
     private HashMap<String,String> activeOrders =null;
     private HashMap<String,String> activePatients =null;
     private HashMap<String,ArrayList<String> > activeInvoices =null;
-	private String filesPath="";
+    private String filesPath="";
     
-    public void loadData(){
+    public String getFilesPath() {
+		return filesPath;
+	}
+	public void setFilesPath(String filesPath) {
+		this.filesPath = filesPath;
+	}
+	public MedSageService(String filesPath){
+		this.filesPath = filesPath;
+		loadData();
+	}
+	public void loadData(){
 	   	activeOrders= new HashMap<String,String>();
     	activePatients= new HashMap<String,String>();
     	activeInvoices= new HashMap<String,ArrayList<String>>();
-
-
+    	log.info("data files path : "+filesPath);
     	MedSegaDaoService medSegaDao = new MedSegaDaoService(filesPath);
     	for(Order order:medSegaDao.getOrderData()){
     		if(order.getState().equalsIgnoreCase(Constants.STATE_ACTIVE)){
@@ -50,11 +60,19 @@ public class MedSageService implements OrderInfo{
     	}
     	
     }
+
+ 	@Override
 	public Map<String,String> getActiveOrders() throws CWAException{
-		return activeOrders;
-	}
-	
+ 		if(activeOrders.isEmpty()){
+ 			throw new CWAException(Constants.ERROR_LOADING_DATA,Constants.ERROR_LOADING_DATA_DESC);
+ 		}
+ 		return activeOrders;
+ 	};
+ 	@Override
 	public ArrayList<String> getOrderActiveInvoices(String orderId) throws CWAException{
+ 		if(activeOrders.isEmpty()){
+ 			throw new CWAException(Constants.ERROR_LOADING_DATA,Constants.ERROR_LOADING_DATA_DESC);
+ 		}
 		return activeInvoices.get(orderId);
 	}
 }
