@@ -1,0 +1,17 @@
+order_id,category,state
+C424294,big_chinstrap,active
+C035962,small_tubing,active
+C069987,big_pillows,active
+C032306,small_mask,active
+C967824,big_mask,deleted
+C289566,medium_tubing,active
+C494738,medium_chinstrap,active
+C300581,big_tubing,deleted
+C696253,big_disposable,deleted
+C628944,big_headgear,active
+C732380,small_pillows,active
+C439738,medium_mask,active
+C165687,small_chinstrap,active
+C921807,small_disposable,active
+C963278,medium_headgear,active
+C126767,small_headgear,deleted
