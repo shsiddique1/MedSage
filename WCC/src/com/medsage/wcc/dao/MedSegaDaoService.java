@@ -28,21 +28,20 @@ public class MedSegaDaoService {
 		loadData(filesPath);
 	}
 	private void loadData(String filesPath){
-		orders= new ArrayList();
-		patients= new ArrayList();
-		invoices= new ArrayList();
+		orders= new ArrayList<Order> ();
+		patients= new ArrayList<Patient>();
+		invoices= new ArrayList<Invoice> ();
 		try {
 			File folder = new File(filesPath);
 			File[] listOfFiles = folder.listFiles();
 
 			for (File file : listOfFiles) {
 				if (file.isFile()) {
-					//System.out.println(file.getName());
 					BufferedReader br = new BufferedReader(new FileReader(file));
 					String cvsSplitBy=",";
 					String line = br.readLine();
 					String[] columns = line.split(cvsSplitBy);
-					ArrayList firstRow = new ArrayList<String>(Arrays.asList(columns));
+					ArrayList<String> firstRow = new ArrayList<String>(Arrays.asList(columns));
 					if(firstRow.contains(Constants.ORDER_CATEGORY_COLUMN)){	//Orders Data
 						while ((line = br.readLine()) != null) {
 							// use comma as separator
@@ -58,7 +57,6 @@ public class MedSegaDaoService {
 								}
 							}
 							orders.add(order);
-							//System.out.println("Country [code= " + country[4] + " , name=" + country[5] + "]");
 						}
 					}else if (firstRow.contains(Constants.PATIENT_NAME_COLUMN)){ // Patients Data
 						while ((line = br.readLine()) != null) {
@@ -112,7 +110,21 @@ public class MedSegaDaoService {
 
 		}
 	}
-	
+	private void printData(){
+		System.out.println("OrderData========");
+		for(Order order:orders){
+			System.out.println(order.getOrderId()+","+order.getCategory()+","+order.getState());
+		}
+		System.out.println("patientData========");
+		for(Patient patient:patients){
+			System.out.println(patient.getPatientId()+","+patient.getName()+","+patient.getState());
+		}
+		System.out.println("invoiceData========");
+		for(Invoice invoice:invoices){
+			System.out.println(invoice.getOrderId()+","+invoice.getPatientId()+","+invoice.getState());
+		}
+		System.out.println("========================");
+	}
 	public ArrayList<Order> getOrderData(){
 		return orders;
 	}
@@ -122,4 +134,8 @@ public class MedSegaDaoService {
 	public ArrayList<Invoice> getInvoiceData(){
 		return invoices;
 	}
+	public static void main(String[ ] args){
+
+	}
+
 }
