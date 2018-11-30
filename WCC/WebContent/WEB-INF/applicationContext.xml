@@ -22,4 +22,14 @@
 
 
 	<context:annotation-config />
+	<bean id="WCCApiConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:wcc-config.properties" />
+	</bean>
+	<!-- Spring Beans Helper -->
+	<bean id="springHelper" class="com.medSage.wcc.util.SpringHelper">
+		<property name="isRootContext">
+			<value>true</value>
+		</property>
+	</bean>
 </beans>
