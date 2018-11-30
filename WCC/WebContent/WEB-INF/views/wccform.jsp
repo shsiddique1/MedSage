@@ -2,10 +2,16 @@
 <html>
 <head>
 <script type="text/javascript">
+	function execute(path) {
+		var form = document.getElementById("formid");
+		form.setAttribute("action", path);
+		form.submit();
+	}
 </script>
 <title>medSage CSV Importing</title>
 </head>
 <body style="font-family: Arial; font-size: smaller;">
+
 	<table bgcolor="lightblue" width="50%" align="center">
 		<tr>
 			<td align="center"><h2>medSage CSV Importing</h2></td>
@@ -42,8 +48,9 @@
 							</tr>
 						</c:forEach>
 					</table>
-				</td>
-			</tr>
-		</table>
+					</div>
+				</form:form></td>
+		</tr>
+	</table>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="WCC" default="build" basedir=".">
+<project name="WCC" default="war" basedir=".">
 	
   <property  file="build.property"/>
   <property name="JAVA_HOME" location="${java.home}" />
@@ -17,12 +17,38 @@
   <target name="build" depends="clean" description="Compile java source">
     <mkdir dir="${build.classes}"/>
   	<mkdir dir="${deployment.classes}"/>
-  	 <javac srcdir="src" destdir="${build.classes}" debug="yes" >
-	 <classpath refid="project.class.path"/>
+
+	<javac srcdir="src" destdir="${build.classes}" debug="yes" >
+		<classpath refid="project.class.path"/>
 	</javac>
+    <copy todir="${deployment.classes}">
+      <fileset dir="${build.classes}" excludes="**/*.java"/>
+    </copy>
+    <copy todir="${deployment.classes}">
+      <fileset dir="resources" excludes="**/config*.properties"/>
+    </copy>
   </target>
+ 
+<target name="war" depends="clean,build">
+	<war destfile="deployment/WCC.war" webxml="WebContent/WEB-INF/web.xml">
+	<fileset dir="WebContent">
+	    <!-- Since this application is expected to be deployed on a Tomcat Server, this library
+	    should be available in all environments, and include it there will just cause jar conflict.
+	    So we have it for dev, but we exclude it for all the deploys. -->
+	     <exclude name="**/servlet-api.jar"/>
+	 </fileset>
+	 <manifest>
+		      <attribute name="Built-By" value="SSD"/>
+		      <!-- Information about the program itself -->
+		      <attribute name="Implementation-Title" value="WCC.war"/>
+		      <attribute name="Implementation-Version" value="${wcc.version.implementation}"/>
+	     </manifest>
+	</war>
+</target>
+	
   <target name="clean" description="Cleans this project">
-  	<delete dir="${build.classes}" failonerror="false" />
-  	<delete dir="${deployment.classes}" failonerror="false" />
- </target>
+    <delete dir="${build.classes}" failonerror="false" />
+    <delete dir="${deployment.classes}" failonerror="false" />
+  	<delete dir="deployment" failonerror="false" />
+  </target>
 </project>
