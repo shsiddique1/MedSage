@@ -60,6 +60,22 @@ public class MedSegaDaoService {
 							orders.add(order);
 							//System.out.println("Country [code= " + country[4] + " , name=" + country[5] + "]");
 						}
+					}else if (firstRow.contains(Constants.PATIENT_NAME_COLUMN)){ // Patients Data
+						while ((line = br.readLine()) != null) {
+							// use comma as separator
+							String[] data = line.split(cvsSplitBy);
+							Patient patient = new Patient();
+							for (int i=0;i<columns.length;i++){ // Column order in the CSV is unspecified
+								if(columns[i].equalsIgnoreCase(Constants.PATIENT_ID_COLUMN)){
+									patient.setPatientId(data[i]);
+								}else if(columns[i].equalsIgnoreCase(Constants.PATIENT_NAME_COLUMN)){
+									patient.setName(data[i]);
+								}else{
+									patient.setState(data[i]);
+								}
+							}
+							patients.add(patient);
+						}
 					}
 					if (br != null) {
 						try {
