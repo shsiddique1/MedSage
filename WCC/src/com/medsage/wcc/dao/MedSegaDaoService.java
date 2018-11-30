@@ -134,8 +134,4 @@ public class MedSegaDaoService {
 	public ArrayList<Invoice> getInvoiceData(){
 		return invoices;
 	}
-	public static void main(String[ ] args){
-
-	}
-
 }
