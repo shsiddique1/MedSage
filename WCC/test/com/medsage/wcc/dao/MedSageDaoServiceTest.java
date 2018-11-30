@@ -11,7 +11,7 @@ import com.medsage.wcc.dto.Order;
 import com.medsage.wcc.dto.Patient;
 
 public class MedSageDaoServiceTest {
-	String filePath="C:/Dev/apache-tomcat-8.5.35/webapps/WCC/medsage_csvs/";
+	String filePath="medsage_csvs/";
 	
 	@Test
 	public void validateOrders(){

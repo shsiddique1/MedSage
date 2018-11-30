@@ -12,7 +12,7 @@ import com.medsage.wcc.exception.CWAException;
 
 
 public class MedSageServiceTest {
-	String filePath="C:/Dev/apache-tomcat-8.5.35/webapps/WCC/medsage_csvs/";
+	String filePath="medsage_csvs/";
 	@Test
 	public void activeOrdersTest() throws CWAException{
 		try{

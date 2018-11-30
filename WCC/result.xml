@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="L004163" name="com.medsega.wcc.api.impl.MedSageDaoServiceTest" skipped="0" tests="1" time="0.0" timestamp="2018-11-30T21:43:58">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="wcc.version.implementation" value="1.0.0" />
+    <property name="os.name" value="Windows 8.1" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327" />
+    <property name="java.runtime.version" value="1.7.0_80-b15" />
+    <property name="lf.clusterName" value="OsmLfCluster" />
+    <property name="user.name" value="shahzad.siddique" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin" />
+    <property name="lf.userName" value="weblogic" />
+    <property name="ant.project.default-target" value="war" />
+    <property name="ant.project.name" value="WCC" />
+    <property name="java.version" value="1.7.0_80" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="CA" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_80\jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\Dev\GitHub\Repository\MedSage\WCC\build.xml" />
+    <property name="os.version" value="6.3" />
+    <property name="ant.file.WCC" value="C:\Dev\GitHub\Repository\MedSage\WCC\build.xml" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="24.80-b11" />
+    <property name="user.variant" value="" />
+    <property name="cf.adminServerListenPort" value="7001" />
+    <property name="ant.library.dir" value="C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.7.0_80\jre" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.script" value="" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/scripts/" />
+    <property name="user.home" value="C:\Users\shahzad.siddique" />
+    <property name="cf.adminServerListenAddress" value="localhost" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="aia.emulator.serverName" value="AdminServer" />
+    <property name="java.library.path" value="C:\NGPP\Eclipse\Neon_DS735;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Oracle\Database_Client;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\RSA SecurID Token Common;C:\Program Files\IBM\RationalSDLC\common;C:\Program Files\IBM\RationalSDLC\Clearquest\cqcli\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\IBM\gsk8\lib;C:\Program Files (x86)\IBM\gsk8\bin;C:\Program Files\IBM\RationalSDLC\ClearCase\bin;C:\Program Files\IBM\RationalSDLC\ClearCase\RemoteClient\cteapis;C:\Users\shahzad.siddique\AppData\Local\Microsoft\WindowsApps;C:\Users\shahzad.siddique\AppData\Local\GitHubDesktop\bin;C:\NGPP\Eclipse\Neon_DS735;;.;C:\NGPP\Eclipse\Neon_DS735\configuration\org.eclipse.osgi\838\0\.cp" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="tomcat.webapp.path" value="C:/Dev/apache-tomcat-8.5.35/webapps" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.eclipse.ant.internal.launching.remote.InternalAntRunner -Dorg.eclipse.ant.core.ANT_PROCESS_ID=1543614235677 -Declipse.connect.port=51744 -Declipse.pdebuild.home=/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/./ -Declipse.pdebuild.scripts=/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/scripts/ -Declipse.pdebuild.templates=/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/templates/ -Dcf.adminServerListenAddress=localhost -Dcf.adminServerListenPort=7001 -Dcf.userName=weblogic -Dlf.adminServerListenAddress=localhost -Dlf.adminServerListenPort=7001 -Dlf.userName=weblogic -Daia.emulator.serverName=AdminServer -Dcf.clusterName=OsmCfCluster -Dlf.clusterName=OsmLfCluster -Dant.home=C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327 -logger org.eclipse.ant.internal.launching.remote.logger.RemoteAntBuildLogger -inputhandler org.eclipse.ant.internal.ui.antsupport.inputhandler.ProxyInputHandler -buildfile C:\Dev\GitHub\Repository\MedSage\WCC\build.xml test" />
+    <property name="java.class.path" value="C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-antlr.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-bcel.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-bsf.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-log4j.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-oro.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-regexp.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-resolver.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-apache-xalan2.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-commons-logging.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-commons-net.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-jai.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-javamail.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-jdepend.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-jmf.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-jsch.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-netrexx.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-swing.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-testutil.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;C:\NGPP\Eclipse\Neon_DS735\configuration\org.eclipse.osgi\254\0\.cp\lib\antdebug.jar;C:\NGPP\Eclipse\Neon_DS735\configuration\org.eclipse.osgi\254\0\.cp\lib\remote.jar;C:\NGPP\Eclipse\Neon_DS735\configuration\org.eclipse.osgi\255\0\.cp\lib\remoteAnt.jar;C:\NGPP\Eclipse\Neon_DS735\configuration\org.eclipse.osgi\1065\0\.cp\antBuildListener.jar;C:\Program Files\Java\jdk1.7.0_80\lib\tools.jar;C:\NGPP\Eclipse\Neon_DS735\plugins\org.eclipse.swt.win32.win32.x86_64_3.105.3.v20170228-0512.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="deployment.classes" value="C:\Dev\GitHub\Repository\MedSage\WCC\WebContent\WEB-INF\classes" />
+    <property name="build.classes" value="C:\Dev\GitHub\Repository\MedSage\WCC\build\classes" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="eclipse.pdebuild.home" value="/C:/NGPP/Eclipse/Neon_DS735/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/./" />
+    <property name="java.io.tmpdir" value="C:\Users\SHAHZA~1.SID\AppData\Local\Temp\" />
+    <property name="lf.adminServerListenPort" value="7001" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="ant.file.type.WCC" value="file" />
+    <property name="cf.userName" value="weblogic" />
+    <property name="cf.clusterName" value="OsmCfCluster" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Dev\GitHub\Repository\MedSage\WCC" />
+    <property name="wcc.version.major" value="1" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="lf.adminServerListenAddress" value="localhost" />
+    <property name="basedir" value="C:\Dev\GitHub\Repository\MedSage\WCC" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="C:\NGPP\Eclipse\Neon_DS735\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="wcc.version.minor" value="0" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <error message="com.medsega.wcc.api.impl.MedSageDaoServiceTest" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: com.medsega.wcc.api.impl.MedSageDaoServiceTest
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:278)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:36)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:456)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:140)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
