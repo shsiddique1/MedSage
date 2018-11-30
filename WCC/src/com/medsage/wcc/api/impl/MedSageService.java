@@ -1,5 +1,7 @@
 package com.medsage.wcc.api.impl;
 
-public class MedSageService {
+import com.medsage.wcc.api.OrderInfo;
+
+public class MedSageService implements OrderInfo{
 
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="WCC" default="build" basedir=".">
+	
+  <property  file="build.property"/>
+  <property name="JAVA_HOME" location="${java.home}" />
+  <property name="build.classes" location="build/classes" />
+  <property name="deployment.classes" location="WebContent/WEB-INF/classes" />
+  
+  <property  file="version.property"/>
+  
+  <path id="project.class.path">
+    <pathelement location="build/classes"/>
+    <!-- Add any additional non-server libs (such as JUnit) -->
+    <fileset dir="WebContent/WEB-INF/lib" includes="**/*.jar"/>
+  </path>
+	
+  <target name="build" depends="clean" description="Compile java source">
+    <mkdir dir="${build.classes}"/>
+  	<mkdir dir="${deployment.classes}"/>
+  	 <javac srcdir="src" destdir="${build.classes}" debug="yes" >
+	 <classpath refid="project.class.path"/>
+	</javac>
+  </target>
+  <target name="clean" description="Cleans this project">
+  	<delete dir="${build.classes}" failonerror="false" />
+  	<delete dir="${deployment.classes}" failonerror="false" />
+ </target>
+</project>
