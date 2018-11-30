@@ -52,7 +52,7 @@
   <target name="clean" description="Cleans this project">
     <delete dir="${build.classes}" failonerror="false" />
     <delete dir="${deployment.classes}" failonerror="false" />
-  	<delete dir="deployment" failonerror="false" />
+  	<delete dir="WebContent/medsage_csvs" failonerror="false" />
   </target>
 	
 	<target name="deploy" depends="war">

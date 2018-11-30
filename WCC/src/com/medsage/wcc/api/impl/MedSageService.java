@@ -6,7 +6,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import com.medsage.wcc.api.OrderInfo;
 import com.medsage.wcc.common.Constants;
-import com.medsage.wcc.dao.MedSegaDaoService;
+import com.medsage.wcc.dao.MedSageDaoService;
 import com.medsage.wcc.dto.Invoice;
 import com.medsage.wcc.dto.Order;
 import com.medsage.wcc.dto.Patient;
@@ -34,7 +34,7 @@ public class MedSageService implements OrderInfo{
     	activePatients= new HashMap<String,String>();
     	activeInvoices= new HashMap<String,ArrayList<String>>();
     	log.info("data files path : "+filesPath);
-    	MedSegaDaoService medSegaDao = new MedSegaDaoService(filesPath);
+    	MedSageDaoService medSegaDao = new MedSageDaoService(filesPath);
     	for(Order order:medSegaDao.getOrderData()){
     		if(order.getState().equalsIgnoreCase(Constants.STATE_ACTIVE)){
     		activeOrders.put(order.getOrderId(), order.getCategory());
