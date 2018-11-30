@@ -76,7 +76,23 @@ public class MedSegaDaoService {
 							}
 							patients.add(patient);
 						}
-					}
+					}else if (firstRow.contains(Constants.ORDER_ID_COLUMN)&&firstRow.contains(Constants.PATIENT_ID_COLUMN)){//Invoice Data
+						while ((line = br.readLine()) != null) {
+							// use comma as separator
+							String[] data = line.split(cvsSplitBy);
+							Invoice invoice = new Invoice();
+							for (int i=0;i<columns.length;i++){ // Column order in the CSV is unspecified
+								if(columns[i].equalsIgnoreCase(Constants.ORDER_ID_COLUMN)){
+									invoice.setOrderId(data[i]);
+								}else if(columns[i].equalsIgnoreCase(Constants.PATIENT_ID_COLUMN)){
+									invoice.setPatientId(data[i]);
+								}else{
+									invoice.setState(data[i]);
+								}
+							}
+							invoices.add(invoice);
+						}
+					} // if file
 					if (br != null) {
 						try {
 							br.close();

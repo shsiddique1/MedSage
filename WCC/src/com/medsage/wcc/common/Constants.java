@@ -11,4 +11,7 @@ public class Constants {
 	
 	public static final String  STATE_ACTIVE = "active" ;
 	
+	public static final int  ERROR_LOADING_DATA = 2001 ;
+	public static final String  ERROR_LOADING_DATA_DESC = "No data were found.Please check if files path is correct." ;
+
 }
