@@ -17,7 +17,7 @@
   <target name="build" depends="clean" description="Compile java source">
     <mkdir dir="${build.classes}"/>
   	<mkdir dir="${deployment.classes}"/>
-
+  	<mkdir dir="WebContent/WEB-INF/medsage_csvs"/>
 	<javac srcdir="src" destdir="${build.classes}" debug="yes" >
 		<classpath refid="project.class.path"/>
 	</javac>
@@ -26,6 +26,9 @@
     </copy>
     <copy todir="${deployment.classes}">
       <fileset dir="resources" excludes="**/config*.properties"/>
+    </copy>
+    <copy todir="WebContent/WEB-INF/medsage_csvs">
+      <fileset dir="medsage_csvs" />
     </copy>
   </target>
  
