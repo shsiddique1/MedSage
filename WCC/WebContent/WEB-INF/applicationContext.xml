@@ -32,7 +32,9 @@
 			<value>true</value>
 		</property>
 	</bean>
-		<bean id="medSageService" class="com.medsage.wcc.api.impl.MedSageService" scope="singleton">
+	<bean id="medSageService" class="com.medsage.wcc.api.impl.MedSageService"
+		scope="singleton">
+		<constructor-arg value="${files.path}" />
 		<property name="filesPath" value="${files.path}" />
 	</bean>
 </beans>
