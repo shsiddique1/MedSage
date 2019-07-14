@@ -1,2 +1,2 @@
 # MedSage
-this is readme file is defined for master
+changes have been merged from R919 to master
